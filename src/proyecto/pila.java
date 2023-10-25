@@ -106,4 +106,80 @@ public class pila {
             }
         }
     }
+    public float sacarpromedio(){
+        float suma = 0;
+        float promedio = 0;
+        for (producto sum : pila){
+            suma = sum.precio + suma;
+        }
+        promedio = suma / pila.size();
+        return promedio;
+    }
+    public void menoralpromedio(){
+        float promedio = sacarpromedio();
+        for(producto menor : pila){
+            if(menor.precio < promedio){
+                JOptionPane.showMessageDialog(null, "Los productos con un precio menor al promedio son:\n"
+                                                    + "ID: " + menor.id + "\n"
+                                                    + "Nombre: " + menor.nom + "\n"
+                                                    + "Fecha lote: " + menor.fechal + "\n"
+                                                    + "Fecha vencimiento: " + menor.fechav + "\n"
+                                                    + "Precio: " + menor.precio);
+            }
+        }
+    }
+    public void mayoralpromedio(){
+        float promedio = sacarpromedio();
+        for(producto mayor : pila){
+            if(mayor.precio > promedio){
+                JOptionPane.showMessageDialog(null, "Los productos con un precio menor al promedio son:\n"
+                                                    + "ID: " + mayor.id + "\n"
+                                                    + "Nombre: " + mayor.nom + "\n"
+                                                    + "Fecha lote: " + mayor.fechal + "\n"
+                                                    + "Fecha vencimiento: " + mayor.fechav + "\n"
+                                                    + "Precio: " + mayor.precio);
+            }
+        }
+    }
+    public void mayorprecio(){
+        producto mayor = new producto();
+        for (producto may : pila){
+            if(may.precio > mayor.precio){
+                mayor = may;
+            }
+        }
+        for (producto may : pila){
+            if(may.precio == mayor.precio){
+                JOptionPane.showMessageDialog(null, "Los productos con mayor precio son:\n"
+                                                    + "ID: " + may.id + "\n"
+                                                    + "Nombre: " + may.nom + "\n"
+                                                    + "Fecha lote: " + may.fechal + "\n"
+                                                    + "Fecha vencimiento: " + may.fechav + "\n"
+                                                    + "Precio: " + may.precio);
+            }
+        }
+    }
+    public void menorprecio(){
+        producto mayor = new producto();
+        for (producto may : pila){
+            if(may.precio > mayor.precio){
+                mayor = may;
+            }
+        }
+        for (producto men : pila){
+            if(men.precio < mayor.precio){
+                mayor = men;
+            }
+        }
+        for (producto men : pila){
+            if(men.precio == mayor.precio){
+                JOptionPane.showMessageDialog(null, "Los productos con mayor precio son:\n"
+                                                    + "ID: " + men.id + "\n"
+                                                    + "Nombre: " + men.nom + "\n"
+                                                    + "Fecha lote: " + men.fechal + "\n"
+                                                    + "Fecha vencimiento: " + men.fechav + "\n"
+                                                    + "Precio: " + men.precio);
+            }
+        }
+    }
 }
