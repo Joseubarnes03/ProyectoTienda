@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ProyectoTienda.jar" size="5835" download="eager" />
+    <jar href="ProyectoTienda.jar" size="9206" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="proyecto.main"  name="ProyectoTienda" />
   <update check="always"/>
